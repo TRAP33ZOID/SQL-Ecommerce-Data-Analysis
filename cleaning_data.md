@@ -15,47 +15,56 @@ What issues will you address by cleaning the data?
 
    
 Queries:
-1)    A)
-        ALTER TABLE all_sessions
-        DROP COLUMN productRefundAmount, 
-        DROP COLUMN searchKeyword, 
-        DROP COLUMN itemRevenue, 
-        DROP COLUMN itemQuantity;
-      B)
-        UPDATE all_sessions
-        SET city = NULL
-        WHERE city = '(not set)' OR city = 'not available in demo dataset';
-        
-        UPDATE all_sessions
-        SET country = NULL
-        WHERE country = '(not set)' OR country = 'not available in demo dataset';
-        
-        -- Repeated for other columns with placeholder values
-      C)
-        UPDATE all_sessions
-        SET city = 'Unknown'
-        WHERE city IS NULL;
-        
-        UPDATE all_sessions
-        SET v2ProductCategory = 'Not Specified'
-        WHERE v2ProductCategory IS NULL;
-2)    B)
+1)A)
+  
+    ALTER TABLE all_sessions
+    DROP COLUMN productRefundAmount, 
+    DROP COLUMN searchKeyword, 
+    DROP COLUMN itemRevenue, 
+    DROP COLUMN itemQuantity;
+  
+B)
+      
+    UPDATE all_sessions
+    SET city = NULL
+    WHERE city = '(not set)' OR city = 'not available in demo dataset';
+    
+    UPDATE all_sessions
+    SET country = NULL
+    WHERE country = '(not set)' OR country = 'not available in demo dataset';
+    
+    -- Repeated for other columns with placeholder values
+C)
+  
+    UPDATE all_sessions
+    SET city = 'Unknown'
+    WHERE city IS NULL;
+    
+    UPDATE all_sessions
+    SET v2ProductCategory = 'Not Specified'
+    WHERE v2ProductCategory IS NULL;
+    
+3)    B)
           
-        UPDATE products
-        SET sentimentScore = 0
-        WHERE sentimentScore IS NULL;
-        
-        UPDATE products
-        SET sentimentMagnitude = 0
-        WHERE sentimentMagnitude IS NULL;
+    UPDATE products
+    SET sentimentScore = 0
+    WHERE sentimentScore IS NULL;
+    
+    UPDATE products
+    SET sentimentMagnitude = 0
+    WHERE sentimentMagnitude IS NULL;
 
-3) A)
+4) A)
+   
         DELETE FROM sales_by_sku
         WHERE productSKU NOT IN (SELECT SKU FROM products);
-4)    A)
-        UPDATE sales_report
-        SET ratio = 0
-        WHERE ratio IS NULL;
+   
+6)    A)
+  
+    UPDATE sales_report
+    SET ratio = 0
+    WHERE ratio IS NULL;
+  
 
 
         
