@@ -1,5 +1,7 @@
 # Final-Project-Transforming-and-Analyzing-Data-with-SQL
 
+BY: WALEED AHMED
+
 ## Project/Goals
 *understanding the process of loading data files into pg admin
 *cleaning data sets
