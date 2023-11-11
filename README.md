@@ -1,4 +1,5 @@
-# Final-Project-Transforming-and-Analyzing-Data-with-SQL
+# SQL-Ecommerce-Data-Analysis 
+## Transforming-and-Analyzing-Data-with-SQL
 
 BY: WALEED AHMED
 ERD: https://gyazo.com/cbea8bbc13ab86fa82f7210aeb4c1816
